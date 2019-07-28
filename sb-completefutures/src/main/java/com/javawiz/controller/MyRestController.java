@@ -1,6 +1,5 @@
 package com.javawiz.controller;
 
-import java.util.List;
 import java.util.concurrent.Future;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,8 +15,8 @@ public class MyRestController {
 	
 	@Autowired
 	MyService myService;
-	// Exercise using curl http://localhost:8080/async?input=lorem,ipsum,dolor,sit,amet
-	  @RequestMapping(path = "async1", method = RequestMethod.GET)
+	  // Exercise using curl http://localhost:8080/async?input=oxmore
+	  @RequestMapping(path = "async", method = RequestMethod.GET)
 	  public Future<String> get(@RequestParam String input) throws Exception {
 	    return myService.concatenateAsync(input);
 	  }
